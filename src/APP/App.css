@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+    height: auto;   
+    align-items: center;
+    background: linear-gradient(#490505, #202131);
+}
+
+#root {
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-template-areas: 
+      "header header header header"
+      "nav nav nav nav" 
+      "aside movies movies movies"
+      "footer footer footer footer"
+    ;
+    grid-template-rows: 100px 70px auto 70px;
+}
+
+header {
+    grid-area: header;
+    border: 5px solid white;
+    background: rgb(216, 240, 1);
+}
+
+.nav__container {
+    grid-area: nav;
+    border: 5px solid rgb(102, 35, 35);
+    background: rgb(201, 56, 11);
+}
+
+.movies__container {
+    grid-area: movies;
+    border: 5px solid rgb(9, 161, 67);
+    background: rgb(10, 156, 83);
+}
+
+.aside__container {
+    grid-area: aside;
+    border: 5px solid rgb(13, 74, 131);
+    background: rgb(190, 14, 196);
+}
+
+footer {
+    grid-area: footer;
+    border: 5px solid rgb(169, 8, 209);
+    background: rgb(230, 63, 21);
+}
+  
