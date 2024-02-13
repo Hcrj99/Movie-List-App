@@ -6,6 +6,9 @@ function App() {
     <React.Fragment>
       {/*header section*/}
       <header className ='header__container'>
+        <div className='logo__container'>
+          <div className='logo__container-play'></div>
+        </div>
         <h1>BIG SCREEN</h1>
       </header>
 

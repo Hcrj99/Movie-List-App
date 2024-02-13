@@ -9,31 +9,55 @@
 }
 
 body {
-    height: 100%;
+    width: 100%;
     height: auto;   
     align-items: center;
-    background: linear-gradient(#490505, #202131);
+    background: rgb(27, 6, 31)
 }
 
 #root {
-    width: 100%;
-    height: auto;
     display: grid;
     justify-content: center;
     text-align: center;
-    grid-template-areas: 
+    grid-template-areas:  
       "header header header header"
       "nav nav nav nav" 
       "aside movies movies movies"
       "footer footer footer footer"
     ;
-    grid-template-rows: 100px 70px auto 70px;
+    grid-template-rows: 120px 70px auto 70px;
 }
 
 header {
     grid-area: header;
-    border: 5px solid white;
-    background: rgb(216, 240, 1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Sixtyfour", sans-serif;font-family: "Sixtyfour", sans-serif;
+    color: #7603d4;
+    background: transparent;
+}
+
+.logo__container{
+    background: linear-gradient(90deg,#7603d4 15%, #3c3e58 100%);
+    width: 40px;
+    height: 40px;
+    border-radius: 300px;
+}
+
+.logo__container-play{
+    width: 0;
+    height: 0;
+    margin-top: 15px;
+    margin-left: 16px;
+    border-left: 12px solid rgb(255, 255, 255);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
 }
 
 .nav__container {
