@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <React.Fragment>
+    <div className='app'>
       {/*header section*/}
       <header className ='header__container'>
         <div className='logo__container'>
@@ -18,7 +18,7 @@ function App() {
           <li><a href ='#'>Home</a></li>
           <li><a href ='#'>Movies</a></li>
           <li><a href ='#'>Blog</a></li>
-          <li><a href ='#'>contact</a></li>
+          <li><a href ='#'>Contact</a></li>
         </ul>
       </nav>
 
@@ -63,7 +63,7 @@ function App() {
       <footer>
         &copy; Movies App BIG SCREEN - <a href = '#'>Github</a>
       </footer>
-    </React.Fragment>
+    </div>
   );
 }
 
