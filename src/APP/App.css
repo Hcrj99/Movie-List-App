@@ -107,9 +107,35 @@ header {
 .movies__container-movie-item{
     margin: 30px;
     padding: 60px 25px 60px 25px;
-    background-color: #6201b1;
+    background-color: #3d056b;
     border-radius: 10px;
     box-shadow: 0px 0px 6px #9b9a9b;
+}
+
+.movie__item-edit, .movie__item-delete {
+    width: 150px;
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 15px 10px 5px 10px;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 300ms;
+    color: rgb(1, 0, 2);
+    background: linear-gradient(160deg,#ffffff 0%,#7202aa 75%);
+} 
+
+.movie__item-edit:hover {
+    background: #8400ff;
+    color: wheat;
+}
+
+.movie__item-delete:hover {
+    background: #300046;
+    color: white;
 }
 
 .aside__container {
