@@ -23,11 +23,13 @@ function App() {
       </nav>
 
       <aside className ='aside__container'>
-        <div className ='aside__container-search'>Search</div>
-        <form>
-          <input type = 'text'/>
-          <button>Search</button>
-        </form>
+        <div className ='aside__container-search'>
+          <h3>Search movie</h3>
+          <form>
+            <input type = 'text' placeholder='Search movie'/>
+            <input type = 'submit'/>
+          </form>
+        </div>
         <div className = 'add__container'>
           <h3 className = 'add__container-title'>Add Movies</h3>
           <form>
