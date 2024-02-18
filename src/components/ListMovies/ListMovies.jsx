@@ -39,12 +39,12 @@ function ListMovies ({ moviesList, setMovieList }) {
           <article key={movie.id} className = 'movies__container-movie-item'>
             <h3 className = 'movie__item-title' >{movie.title}</h3>
             <p className = 'movie__item-description'>{movie.description}</p>
-            <button onClick={() => {setEdit(movie.id)}} className = 'movie__item-edit'>Edit</button>
+            <button onClick={() => setEdit(movie.id)} className = 'movie__item-edit'>Edit</button>
             <button onClick={() => deleteMovie(movie.id)} className = 'movie__item-delete'>Delete</button>
 
             {/*Edit movies*/}
             {edit === movie.id && (
-              <EditMovie movie={movie}/>
+              <EditMovie movie={movie} getMovies={getListMovies} setListMovies={setMovieList} setEdit={setEdit}/>
             )}
 
           </article>

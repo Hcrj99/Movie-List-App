@@ -290,3 +290,7 @@ footer > a {
         font-size: 0.6rem;
     }
 }
+
+.edit__container{
+    margin-top: 15px;
+}
