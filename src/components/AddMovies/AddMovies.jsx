@@ -1,9 +1,11 @@
 import React from 'react';
 import { saveStorage } from '../../helper/saveLocalStorage';
 
-function AddMovies () {
+function AddMovies ({ setMovieList, movieList }) {
   
   const tittleInit = 'Add Movie';
+
+  const saveItemsStorage = saveStorage('moviesv1', []);
 
   const[ movieState, setMovie ] = React.useState({
     title : '',
@@ -27,8 +29,19 @@ function AddMovies () {
     //save state
     setMovie(movie);
 
-    //save Local storage
-    saveStorage('moviesv1',movie);
+    let newMovies;
+    //upgrade list movies
+    if(movieList !== null){
+      setMovieList( (item) => {
+        newMovies = [...item];
+        newMovies.push(movie);
+        saveItemsStorage(newMovies);
+        return newMovies;
+      });
+    }else{
+      setMovieList(movie);
+      saveStorage('moviesv1', movie);
+    } 
   };
 
 

@@ -1,21 +1,19 @@
 import React, { useEffect } from 'react';
 
-function ListMovies () {
-
-  const[moviesList, setMovieList] = React.useState([]);
+function ListMovies ({ moviesList, setMovieList }) {
 
   useEffect(() => {
     getSearchMovies();
   },[]);
 
   const getSearchMovies = () => {
-    let itemLocal = JSON.parse(localStorage.getItem('movies'));
+    let itemLocal = JSON.parse(localStorage.getItem('moviesv1'));
     setMovieList(itemLocal);
   };
 
   return (
     <>
-      {moviesList!= null ? moviesList.map( movie => {
+      {moviesList !== null ? moviesList.map( movie => {
         return(
           <article key={movie.id} className = 'movies__container-movie-item'>
             <h3 className = 'movie__item-title' >{movie.title}</h3>

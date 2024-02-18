@@ -1,15 +1,24 @@
 const saveStorage = (key,item) => {
 
 	//get data local storage
-	let itemLocal = JSON.parse(localStorage.getItem('movies'));//*covert JSON to Array
+	let localStorageItem = localStorage.getItem(key);
+	//let localStorageItem = JSON.parse(localStorage.getItem(key));
 
+	let locaItem;
 	//add elements
-	Array.isArray(itemLocal) ? itemLocal.push(item) : itemLocal = item;
+	if(!localStorageItem){
+		localStorage.setItem(key, JSON.stringify(item));
+	}
+	else{
+		locaItem = JSON.parse(localStorageItem);
+		localStorage.setItem(key, JSON.stringify(locaItem));
+	}
 
-	//save items
-	localStorage.setItem(key, JSON.stringify([itemLocal]));//*save local storage convert string to JSON
+	const saveLocalStorage = (newStorage) => {
+		localStorage.setItem(key, JSON.stringify(newStorage));
+	};
 
-	return item;
+	return saveLocalStorage;
 }
 
 export { saveStorage };

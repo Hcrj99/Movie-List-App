@@ -5,6 +5,9 @@ import { SearchMovies } from '../components/SearchMovies/SerachMovies';
 import { AddMovies } from '../components/AddMovies/AddMovies';
 
 function App() {
+
+  const[moviesList, setMovieList] = React.useState([]);
+
   return (
     <div className='app'>
       {/*header section*/}
@@ -27,12 +30,12 @@ function App() {
 
       <aside className ='aside__container'>
         <SearchMovies/>
-        <AddMovies/>
+        <AddMovies setMovieList={setMovieList} movieList={moviesList}/>
       </aside>
 
       {/*movies catalog*/}
       <section className ='movies__container'>
-        <ListMovies/>
+        <ListMovies moviesList={moviesList} setMovieList={setMovieList}/>
       </section>
 
       <footer>
