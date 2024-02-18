@@ -23,8 +23,26 @@ function AddMovies () {
       description,
     };
 
+    //save state
     setMovie(movie);
+
+    //save Local storage
+    saveStorage(movie);
   };
+
+  const saveStorage = (movie) => {
+
+    //get data local storage
+    let itemLocal = JSON.parse(localStorage.getItem('movies'));//*covert JSON to Array
+
+    //add elements
+    Array.isArray(itemLocal) ? itemLocal.push(movie) : itemLocal = movie;
+
+    //save items
+    localStorage.setItem('movies', JSON.stringify([itemLocal]));//*save local storage convert string to JSON
+
+    return movie;
+  }
 
   return (
     <>
