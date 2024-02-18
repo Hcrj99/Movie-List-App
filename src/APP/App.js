@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import { ListMovies } from '../components/ListMovies';
+import { ListMovies } from '../components/ListMovies/ListMovies';
+import { SearchMovies } from '../components/SearchMovies/SerachMovies';
 
 function App() {
   return (
@@ -24,13 +25,7 @@ function App() {
       </nav>
 
       <aside className ='aside__container'>
-        <div className ='aside__container-search'>
-          <h3>Search movie</h3>
-          <form>
-            <input type = 'text' placeholder='Search movie'/>
-            <input type = 'submit'/>
-          </form>
-        </div>
+        <SearchMovies/>
         <div className = 'add__container'>
           <h3 className = 'add__container-title'>Add Movies</h3>
           <form>
