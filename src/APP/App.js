@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { ListMovies } from '../components/ListMovies/ListMovies';
 import { SearchMovies } from '../components/SearchMovies/SerachMovies';
+import { AddMovies } from '../components/AddMovies/AddMovies';
 
 function App() {
   return (
@@ -26,14 +27,7 @@ function App() {
 
       <aside className ='aside__container'>
         <SearchMovies/>
-        <div className = 'add__container'>
-          <h3 className = 'add__container-title'>Add Movies</h3>
-          <form>
-            <input type = 'text' placeholder = 'Movie title'/>
-            <textarea placeholder = 'Description movie'></textarea>
-            <input type = 'submit'/>
-          </form>
-        </div>
+        <AddMovies/>
       </aside>
 
       {/*movies catalog*/}
