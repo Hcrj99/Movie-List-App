@@ -1,4 +1,5 @@
 import React from 'react';
+import { saveStorage } from '../../helper/saveLocalStorage';
 
 function AddMovies () {
   
@@ -27,22 +28,9 @@ function AddMovies () {
     setMovie(movie);
 
     //save Local storage
-    saveStorage(movie);
+    saveStorage('moviesv1',movie);
   };
 
-  const saveStorage = (movie) => {
-
-    //get data local storage
-    let itemLocal = JSON.parse(localStorage.getItem('movies'));//*covert JSON to Array
-
-    //add elements
-    Array.isArray(itemLocal) ? itemLocal.push(movie) : itemLocal = movie;
-
-    //save items
-    localStorage.setItem('movies', JSON.stringify([itemLocal]));//*save local storage convert string to JSON
-
-    return movie;
-  }
 
   return (
     <>
