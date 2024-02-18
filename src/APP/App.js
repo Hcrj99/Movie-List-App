@@ -29,7 +29,7 @@ function App() {
       </nav>
 
       <aside className ='aside__container'>
-        <SearchMovies/>
+        <SearchMovies moviesList={moviesList} setMovieList={setMovieList}/>
         <AddMovies setMovieList={setMovieList} movieList={moviesList}/>
       </aside>
 

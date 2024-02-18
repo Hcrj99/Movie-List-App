@@ -24,7 +24,6 @@ function ListMovies ({ moviesList, setMovieList }) {
 
     //fliter data to deletee
     let newMovies = moviesLocal.filter((movies) => movies.id !== parseInt(id));
-    console.log(newMovies);
     //upgrade data localstorage
     setMovieList(newMovies);
 
