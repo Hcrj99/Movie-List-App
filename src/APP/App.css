@@ -19,10 +19,10 @@ body {
     justify-content: center;
     text-align: center;
     grid-template-areas:  
-      "header header header header"
-      "nav nav nav nav" 
-      "aside movies movies movies"
-      "footer footer footer footer"
+      'header header header header'
+      'nav nav nav nav' 
+      'aside movies movies movies'
+      'footer footer footer footer'
     ;
     grid-template-rows: 120px 70px auto 70px;
 }
@@ -37,7 +37,7 @@ header {
     text-align: left;
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: "Sixtyfour", sans-serif;font-family: "Sixtyfour", sans-serif;
+    font-family: 'Sixtyfour', sans-serif;font-family: 'Sixtyfour', sans-serif;
     color: #7603d4;
     background: transparent;
 }
@@ -82,10 +82,10 @@ header {
 .nav__container li > a{
     padding: 10px;
     text-decoration: none;
-    font-family: "Mukta", sans-serif;
+    font-family: 'Mukta', sans-serif;
     font-size: 1rem;
     font-weight: bold;
-    font-family: "Sixtyfour", sans-serif;font-family: "Sixtyfour", sans-serif;
+    font-family: 'Sixtyfour', sans-serif;font-family: 'Sixtyfour', sans-serif;
     cursor: pointer;
     color: rgb(241, 216, 255);
     transition: all 300ms;
@@ -156,7 +156,7 @@ header {
     color: white;
 }
 
-input[type="submit"], input[type="button"] {
+input[type='submit'], input[type='button'] {
     width: 100px;
     border: 0;
     outline: 0;
@@ -171,8 +171,8 @@ input[type="submit"], input[type="button"] {
     background: linear-gradient(160deg,#ffffff 0%,#550083 75%);
 }
 
-.aside__container input[type="text"],
-.aside__container input[type="text"],
+.aside__container input[type='text'],
+.aside__container input[type='text'],
 .aside__container textarea{
     display: block;
     width: 90%;
@@ -191,7 +191,7 @@ input[type="submit"], input[type="button"] {
 .aside__container > div > h3 {
     font-size: 1.2rem;
     font-weight: bold;
-    font-family: "Sixtyfour", sans-serif;font-family: "Sixtyfour", sans-serif;
+    font-family: 'Sixtyfour', sans-serif;font-family: 'Sixtyfour', sans-serif;
 }
 
 footer {
@@ -199,7 +199,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Sixtyfour", sans-serif;font-family: "Sixtyfour", sans-serif;
+    font-family: 'Sixtyfour', sans-serif;font-family: 'Sixtyfour', sans-serif;
     color: white;
     border-top: 1px solid #a634f3;
     background: linear-gradient(#6f2ba7 ,#59446d);
@@ -208,7 +208,7 @@ footer {
 footer > a {
     padding: 10px;
     text-decoration: none;
-    font-family: "Mukta", sans-serif;
+    font-family: 'Mukta', sans-serif;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -280,12 +280,12 @@ footer > a {
 }
 
 @media (max-width: 376px) {
-    input[type="submit"], input[type="button"] {
+    input[type='submit'], input[type='button'] {
         width: 50px;
         font-size: 0.6rem;
     }
 
-    .aside__container input[type="text"]{
+    .aside__container input[type='text']{
         font-size: 0.6rem;
     }
 }
