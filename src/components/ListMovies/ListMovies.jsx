@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import { saveStorage } from '../../helper/saveLocalStorage';
+import { EditMovie } from '../EditMovie/EditMovie';
 
 function ListMovies ({ moviesList, setMovieList }) {
+
+  const [edit, setEdit] = React.useState(0);
 
   useEffect(() => {
     getListMovies();
@@ -36,8 +39,14 @@ function ListMovies ({ moviesList, setMovieList }) {
           <article key={movie.id} className = 'movies__container-movie-item'>
             <h3 className = 'movie__item-title' >{movie.title}</h3>
             <p className = 'movie__item-description'>{movie.description}</p>
-            <button className = 'movie__item-edit'>Edit</button>
+            <button onClick={() => {setEdit(movie.id)}} className = 'movie__item-edit'>Edit</button>
             <button onClick={() => deleteMovie(movie.id)} className = 'movie__item-delete'>Delete</button>
+
+            {/*Edit movies*/}
+            {edit === movie.id && (
+              <EditMovie movie={movie}/>
+            )}
+
           </article>
         );
       }) : <h2>Add movies please</h2>}

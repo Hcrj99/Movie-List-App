@@ -63,7 +63,7 @@ function AddMovies ({ setMovieList, movieList }) {
         <textarea 
         placeholder = 'Description movie'
         name='descriptionMovie'
-        ></textarea>
+        />
         <input type = 'submit'/>
       </form>
     </div>

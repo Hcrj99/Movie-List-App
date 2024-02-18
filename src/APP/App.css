@@ -108,9 +108,10 @@ header {
 .movies__container-movie-item{
     flex-grow: 1;
     margin: 30px;
-    padding: 70px 10px 20px 10px;
+    padding: 20px 10px 20px 10px;
     background-color: #3d056b;
     border-radius: 10px;
+    color: #9422ff;
     box-shadow: 0px 0px 6px #9b9a9b;
 }
 
@@ -171,9 +172,9 @@ input[type='submit'], input[type='button'] {
     background: linear-gradient(160deg,#ffffff 0%,#550083 75%);
 }
 
-.aside__container input[type='text'],
-.aside__container input[type='text'],
-.aside__container textarea{
+input[type='text'],
+input[type='text'],
+textarea{
     display: block;
     width: 90%;
     margin: 0 auto;
