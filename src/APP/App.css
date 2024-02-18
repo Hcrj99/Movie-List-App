@@ -294,3 +294,9 @@ footer > a {
 .edit__container{
     margin-top: 15px;
 }
+
+.dont__result {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #c5a8d8;
+}
