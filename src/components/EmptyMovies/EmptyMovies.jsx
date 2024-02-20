@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
+import './EmptyMovies.css'
 
 function EmptyMovies(){
     return (
-        <div>
+        <section className='Empty__container'>
             <h2>Add movies please</h2>
-        </div>
+        </section>
     );
 }
 
