@@ -1,13 +1,19 @@
 import React, { useEffect } from 'react';
 import { saveStorage } from '../../helper/saveLocalStorage';
 import { EditMovie } from '../EditMovie/EditMovie';
+import { EmptyMovies } from '../EmptyMovies/EmptyMovies';
+import { LoadData } from '../LoadData/LoadData';
 
 function ListMovies ({ moviesList, setMovieList }) {
 
   const [edit, setEdit] = React.useState(0);
+  const [load, setLoad] = React.useState(true);
 
   useEffect(() => {
-    getListMovies();
+    setTimeout(() => {
+      getListMovies()
+      setLoad(false);
+    },2000);
   },[]);
 
   const getListMovies = () => {
@@ -30,10 +36,11 @@ function ListMovies ({ moviesList, setMovieList }) {
     saveItemsStorage(newMovies);
 
   };
-
+  
   return (
     <>
-      {moviesList !== null ? moviesList.map( movie => {
+      {load && (<LoadData/>)}
+      {moviesList !== null && moviesList.map( movie => {
         return(
           <article key={movie.id} className = 'movies__container-movie-item'>
             <h3 className = 'movie__item-title' >{movie.title}</h3>
@@ -48,7 +55,8 @@ function ListMovies ({ moviesList, setMovieList }) {
 
           </article>
         );
-      }) : <h2>Add movies please</h2>}
+      })}
+      {moviesList.length <= 0 && (<EmptyMovies/>)}
     </>
   );
 }
